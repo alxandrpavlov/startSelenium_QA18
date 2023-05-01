@@ -34,6 +34,7 @@ public class StartSelenium {
         WebElement root = wd.findElement(By.id("root"));
         WebElement element1 = wd.findElement(By.className("navbar-component_nav__1X_4m"));
         wd.findElements(By.linkText("LOGIN"));
+//        wd.findElement(By.cssSelector("*[name^='Lo']"));
         wd.findElements(By.tagName("password"));
         wd.findElements(By.partialLinkText("regi"));
 
