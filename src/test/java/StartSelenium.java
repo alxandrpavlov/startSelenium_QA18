@@ -16,7 +16,8 @@ public class StartSelenium {
     public void preCondition() {
         wd = new ChromeDriver();
 //        wd.get("https://telranedu.web.app/home");
-        wd.navigate().to("https://telranedu.web.app/home");
+//        wd.navigate().to("https://telranedu.web.app/home");
+        wd.navigate().to("https://telranedu.web.app/login");
 //        wd.navigate().forward();
 //        wd.navigate().back();
 
@@ -26,9 +27,16 @@ public class StartSelenium {
     public void testName() {
 //        System.out.println("TEST IS OVER");
         WebElement element = wd.findElement(By.tagName("a"));
-        By.
+        WebElement form = wd.findElement(By.tagName("form"));
         List<WebElement> elements = wd.findElements(By.tagName("a"));
         System.out.println(elements.size());
+
+        WebElement root = wd.findElement(By.id("root"));
+        WebElement element1 = wd.findElement(By.className("navbar-component_nav__1X_4m"));
+        wd.findElements(By.linkText("LOGIN"));
+        wd.findElements(By.tagName("password"));
+        wd.findElements(By.partialLinkText("regi"));
+
 
 
     }
@@ -36,7 +44,7 @@ public class StartSelenium {
     @AfterMethod
     public void postCondition() {
 //        wd.close();
-        wd.quit();
+//        wd.quit();
 
     }
 
